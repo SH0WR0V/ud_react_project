@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import {Header} from './components/Header';
+import {List} from './components/List';
 import './App.css';
 
 export const App = () => {
@@ -20,16 +21,17 @@ export const App = () => {
   }
 
   return (
-    <div className="App">
-        <Header/>
-        <h1>Welcome Shahriar!</h1>
+      <div className="App">
+          <Header/>
+          <h1>Welcome Shahriar!</h1>
 
-        <div className="box">
-          <p>{count}</p>
-          <button onClick={handleAdd} className="add">Add</button>
-          <button onClick={handleSub} className="sub">Sub</button>
-          <button onClick={handleReset} className="reset">Reset</button>
-        </div>
-    </div>
+          <div className="box">
+            <p>{count}</p>
+            <button onClick={handleAdd} className="add">Add</button>
+            <button onClick={handleSub} className="sub">Sub</button>
+            <button onClick={handleReset} className="reset">Reset</button>
+          </div>
+          <List/>
+      </div>
   )
 }
