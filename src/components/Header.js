@@ -1,10 +1,11 @@
 import React from 'react';
-import pp from '../assets/profile_pic.jpg';
+import pp from '../assets/logo.jpg';
 
 export const Header = () => {
   return (
-    <div>
+    <div className='header'>
         <img className="img" src={pp} alt="" />
+        <a href="/">Home</a>
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
+import { ListCard } from './ListCard';
 import './List.css';
 
-export const List = () => {
+export const List = (props) => {
     const [lists, setLists] = useState([
         {id: 1001, name: "Do Homework", completed: true},
         {id: 1002, name: "Play Pubg", completed: false},
@@ -24,14 +25,11 @@ export const List = () => {
   return (
 
         <div className='App'>
-            <h2>Task List</h2>
+            <h2>Task List {props.title}</h2>
             <ul>
                 <button className='trigger' onClick={change}>{view}</button>
                 {show && lists.map((list) => (
-                    <li key={list.id} className = {list.completed ? 'completed' : 'incomplete'}>
-                        <span>{list.id} - {list.name}</span>
-                        <button onClick = {() => deleteTask(list.id)} className='delete'>Delete</button>
-                    </li>
+                    <ListCard key={list.id} list={list} deleteTask={deleteTask}/>
                 ))}
             </ul>
         </div>

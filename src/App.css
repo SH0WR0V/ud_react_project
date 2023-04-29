@@ -1,8 +1,36 @@
 .App{
-    text-align: center;
-  }
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+h1{
+  font-size: 28px;
+  text-align: center;
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  border-bottom: 1px solid #d7d7d7;
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
+img{
+  max-width: 80px;
+}
   
-  .box{
+.box{
     max-width: 200px;
     margin: 50px auto;
     border-radius: 5px;
