@@ -13,7 +13,7 @@ h1{
   margin: 20px;
 }
 
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,5 +65,15 @@ img{
   button.reset{
     background-color: #0F3460;
   }
+
+  footer{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    height: 70px;
+    font-size: 18px;
+    border-top: 1px solid black;
+}
 
   

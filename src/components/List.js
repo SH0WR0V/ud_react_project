@@ -12,7 +12,6 @@ export const List = (props) => {
     ])
 
     const [show, setShow] = useState(true);
-    const [view, setView] = useState("View");
 
     function deleteTask(id){
         setLists(lists.filter((list) => list.id !== id ))
@@ -20,7 +19,6 @@ export const List = (props) => {
 
     function change() {
         setShow(!show);
-        setView( view === "View" ? "Hide" : "View");
     }
 
   return (
@@ -28,7 +26,7 @@ export const List = (props) => {
         <div className='App'>
             <h2>Task List {props.title}</h2>
             <ul>
-                <button className='trigger' onClick={change}>{view}</button>
+                <button className='trigger' onClick={change}>{show ? "Hide" : "Show"}</button>
                 {show && lists.map((list) => (
                     <ListCard key={list.id} list={list} deleteTask={deleteTask}/>
                 ))}
