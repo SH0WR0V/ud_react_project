@@ -18,11 +18,11 @@ export const Counter = () => {
   }
 
   return (
-    <div className="box">
+    <section className="box">
             <p>{count}</p>
             <button onClick={handleAdd} className="add">Add</button>
             <button onClick={handleSub} className="sub">Sub</button>
             <button onClick={handleReset} className="reset">Reset</button>
-    </div>
+    </section>
   )
 }

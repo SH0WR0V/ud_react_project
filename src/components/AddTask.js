@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './AddTask.css';
 
-export const AddTask = () => {
+export const AddTask = ({lists, setLists}) => {
     const [taskValue, setTaskValue] = useState("");
     const [progress, setProgress] = useState(false);
     const handleChange = (event) =>{
@@ -19,7 +19,7 @@ export const AddTask = () => {
             name : taskValue,
             completed : Boolean(progress)
         }
-        console.log(task);
+        setLists([...lists, task]);
         handleReset();
     }
   return (
@@ -33,7 +33,6 @@ export const AddTask = () => {
             <span className='reset' onClick={handleReset}>Reset</span>
             <button type="submit">Add Task</button>
         </form>
-        <p>{taskValue}</p>
     </section>
   )
 }

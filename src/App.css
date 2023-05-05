@@ -13,7 +13,14 @@ h1{
   margin: 20px;
 }
 
-header {
+main {
+  min-height: 75vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +80,7 @@ img{
     padding: 20px;
     height: 70px;
     font-size: 18px;
-    border-top: 1px solid black;
+    border-top: 1px solid #d7d7d7;
 }
 
   
